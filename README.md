@@ -93,6 +93,17 @@ Reporte de bugs encontrados durante un análisis exploratorio de la plataforma, 
 ---
 
 ## Entorno de pruebas
-- Navegador: Microsoft Edge escritorio
-- Dispositivo móvil: Android
+
+- Navegador: Microsoft Edge 148.0.3967.83 (64 bits)
+- Dispositivo móvil: POCO X4 GT (Android)
 - Fecha del análisis: Mayo 2025
+- Automatización: Python 3.11 · Playwright 1.60 · pytest 9.0.3
+
+## Automatización
+
+Suite de 6 tests con Playwright + Python que cubren smoke testing 
+y regresiones de los bugs documentados.
+
+Herramientas: Python 3.11 · Playwright 1.60 · pytest
+
+Ver evidencias en `/automation/evidencias/`
