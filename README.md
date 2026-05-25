@@ -86,7 +86,7 @@ Reporte de bugs encontrados durante un análisis exploratorio de la plataforma, 
 - **Esperado:** El sistema mantiene el valor original para que el usuario pueda corregirlo
 - **Obtenido:** El apellido queda truncado automáticamente y se muestra así en el perfil sin informar al usuario
 - **Recomendación:** Reducir el límite a 30-40 caracteres, más acorde a la realidad, y validar en frontend antes de llegar al popup
-- **Impacto:** El usuario puede guardar datos de identidad incorrectos sin saberlo en una plataforma con verificación KYC
+- **Impacto:** Fricción en la experiencia de usuario (UX) al alterar sus datos de identidad sin notificación. Además, si estos datos se envían de forma automática para el proceso de verificación de identidad (KYC), el truncado provocará un rechazo inmediato del sistema al no coincidir exactamente con el documento oficial.
 
 <img width="714" height="325" alt="image" src="https://github.com/user-attachments/assets/921748ce-f3cf-4037-9c91-a8c610fcf8cc" />
 
