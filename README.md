@@ -4,6 +4,11 @@ Análisis de calidad realizado sobre la plataforma web y app móvil de TuLotero 
 
 ## Sobre este repositorio
 
+## Criterio de severidades
+- **Alta:** Afecta funcionalidad crítica o datos del usuario
+- **Media:** Afecta experiencia de usuario de forma notable
+- **Baja:** Problema menor que no bloquea el uso
+
 Reporte de bugs encontrados durante un análisis exploratorio de la plataforma, documentados con pasos de reproducción, resultado esperado vs obtenido e impacto.
 
 ---
@@ -28,11 +33,11 @@ Reporte de bugs encontrados durante un análisis exploratorio de la plataforma, 
 
 ---
 
-### BUG-003 · Validación de email insuficiente en formulario de comentarios
+### BUG-003 · Ausencia de validación de formato estricto en campo email de comentarios
 - **Severidad:** Media
 - **Plataforma:** Web escritorio y móvil
 - **Pasos:** Ir al Blog → Sección comentarios → Introducir email con formato mínimo válido pero dominio inexistente → Publicar
-- **Esperado:** El sistema rechaza emails no verificables
+- **Esperado:** El sistema valida que el email tenga un formato estricto y real antes de publicar
 - **Obtenido:** El comentario se publica sin validación adicional
 - **Impacto:** Permite registros con emails falsos en una plataforma de pagos regulada
 
