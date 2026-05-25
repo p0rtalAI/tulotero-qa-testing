@@ -70,6 +70,6 @@ Reporte de bugs encontrados durante un análisis exploratorio de la plataforma, 
 ---
 
 ## Entorno de pruebas
-- Navegador: Chrome escritorio
+- Navegador: Microsoft Edge escritorio
 - Dispositivo móvil: Android
 - Fecha del análisis: Mayo 2025
