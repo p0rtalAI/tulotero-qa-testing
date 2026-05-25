@@ -86,10 +86,24 @@ Reporte de bugs encontrados durante un análisis exploratorio de la plataforma, 
 - **Esperado:** El sistema mantiene el valor original para que el usuario pueda corregirlo
 - **Obtenido:** El apellido queda truncado automáticamente y se muestra así en el perfil sin informar al usuario
 - **Recomendación:** Reducir el límite a 30-40 caracteres, más acorde a la realidad, y validar en frontend antes de llegar al popup
-- **Impacto:** Fricción en la experiencia de usuario (UX) al alterar sus datos de identidad sin notificación. Además, si estos datos se envían de forma automática para el proceso de verificación de identidad (KYC), el truncado provocará un rechazo inmediato del sistema al no coincidir exactamente con el documento oficial.
+- **Impacto:** Fricción en la experiencia de usuario (UX) al alterar sus datos de identidad sin notificación. Además, si estos datos se envían de forma automática para el proceso de verificación de identidad (KYC), el truncado provocará un rechazo inmediato del sistema al no coincidir exactamente con el documento oficial. 
 
 <img width="714" height="325" alt="image" src="https://github.com/user-attachments/assets/921748ce-f3cf-4037-9c91-a8c610fcf8cc" />
 
+---
+
+### BUG-007 · Falta de sanitización y formato en campos de Nombre y Apellidos
+- **Severidad:** Baja
+- **Plataforma:** App móvil Android/Web escritorio
+- **Pasos:** Introducir nombre o apellido intercalando mayúsculas y minúsculas de forma aleatoria (ej: AleJaNdrO o pEreZ) → Guardar → Observar el perfil
+- **Esperado:** El sistema aplica un formato automático de nombre propio (primera letra en mayúscula y el resto en minúsculas) o normaliza el texto antes de guardar.
+- **Obtenido:** El sistema acepta, guarda y muestra el texto con las mayúsculas intercaladas de forma literal sin aplicar ningún filtro.
+- **Recomendación:** Implementar una regla de formato en el frontend (tipo Capitalize) que normalice el texto automáticamente antes de procesarlo.
+- **Impacto:** Mala imagen visual en la interfaz de la aplicación y riesgo de generar documentos legales, facturas o registros de identidad (KYC) con formatos incorrectos o poco profesionales.
+
+<img width="634" height="90" alt="image" src="https://github.com/user-attachments/assets/5f60cb8c-7f93-4406-a976-198fa7c4d044" />
+
+  
 ---
 
 ## Entorno de pruebas
